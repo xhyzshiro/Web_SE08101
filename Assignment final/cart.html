@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | Cinematic Vision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cv-header">
+    <div class="cv-header-inner">
+        <a href="index.html" class="cv-logo">
+            <span class="logo-dot"></span>
+            CINEMATIC VISION
+        </a>
+        <nav class="cv-nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="cart.html" class="nav-link">Cart</a>
+            <a href="my-orders.html" class="nav-link">My Orders</a>
+            <a href="order-history.html" class="nav-link">History</a>
+        </nav>
+    
+        <div class="cv-actions">
+            <a href="shop.html" class="cv-btn-primary">
+                <span>SHOP NOW</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="cart.html" class="cv-cart">
+                <span class="cv-cart-icon">
+                    <i class="fas fa-bag-shopping"></i>
+                    <span class="cart-count">0</span>
+                </span>
+                <span class="cv-cart-text">Cart</span>
+            </a>
+            
+            <!-- User Dropdown -->
+            <div class="cv-user-dropdown" id="userDropdown">
+                <div class="cv-login" id="userTrigger">
+                    <span class="cv-avatar">
+                        <i class="fas fa-user"></i>
+                    </span>
+                    <span class="cv-login-text">Login</span>
+                    <i class="fas fa-chevron-down dropdown-arrow"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="dropdown-header">
+                        <div class="dropdown-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="dropdown-user-info">
+                            <span class="user-name">Guest User</span>
+                            <span class="user-email">Please login</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <a href="my-orders.html" class="dropdown-item">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>My Orders</span>
+                        <span class="badge-pending" id="pendingBadge">0</span>
+                    </a>
+                    <a href="order-history.html" class="dropdown-item">
+                        <i class="fas fa-history"></i>
+                        <span>Order History</span>
+                    </a>
+                    <a href="wishlist.html" class="dropdown-item">
+                        <i class="fas fa-heart"></i>
+                        <span>Wishlist</span>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="profile.html" class="dropdown-item">
+                        <i class="fas fa-user-edit"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                    <a href="#" class="dropdown-item" id="logoutBtn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div class="cart-container">
+        <div class="page-header">
+            <span class="page-tag">SECURE CHECKOUT</span>
+            <h1 class="page-title">SHOPPING CART</h1>
+            <div class="section-divider"></div>
+            <p>Review your items before proceeding to payment</p>
+        </div>
+
+        <div id="cartContent"></div>
+    </div>
+
+    <footer class="cv-footer">
+        <div class="footer-inner">
+            <p>CINEMATIC VISION © 2026 - All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

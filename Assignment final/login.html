@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Cinematic Vision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-effect"></div>
+    
+    <div class="login-container">
+        <div class="login-card">
+            <div class="logo">
+                <h1>CINEMATIC VISION</h1>
+                <div class="logo-dot"></div>
+                <p>YOUR CINEMATIC JOURNEY BEGINS HERE</p>
+            </div>
+
+            <div class="auth-tabs">
+                <button class="tab-btn active" data-tab="login">LOGIN</button>
+                <button class="tab-btn" data-tab="register">REGISTER</button>
+            </div>
+
+            <div id="loginForm" class="auth-form active">
+                <div class="input-group">
+                    <label>USERNAME / EMAIL</label>
+                    <input type="text" id="loginUsername" placeholder="Enter your username or email">
+                </div>
+                <div class="input-group">
+                    <label>PASSWORD</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="loginPassword" placeholder="Enter your password">
+                        <button type="button" class="toggle-password" data-target="loginPassword">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe"> Remember me
+                    </label>
+                    <a class="forgot-link" onclick="forgotPassword()">Forgot password?</a>
+                </div>
+                <button class="btn-submit" onclick="handleLogin()">
+                    <i class="fas fa-arrow-right"></i> SIGN IN
+                </button>
+            </div>
+
+            <div id="registerForm" class="auth-form">
+                <div class="input-group">
+                    <label>FULL NAME *</label>
+                    <input type="text" id="regFullname" placeholder="Enter your full name">
+                </div>
+                <div class="input-group">
+                    <label>USERNAME *</label>
+                    <input type="text" id="regUsername" placeholder="Choose a username">
+                </div>
+                <div class="input-group">
+                    <label>EMAIL *</label>
+                    <input type="email" id="regEmail" placeholder="Enter your email">
+                </div>
+                <div class="input-group">
+                    <label>PHONE (Optional)</label>
+                    <input type="tel" id="regPhone" placeholder="Enter your phone number">
+                </div>
+                <div class="input-group">
+                    <label>PASSWORD *</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="regPassword" placeholder="Create a password (min 6 characters)">
+                        <button type="button" class="toggle-password" data-target="regPassword">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>CONFIRM PASSWORD *</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="regConfirmPassword" placeholder="Confirm your password">
+                        <button type="button" class="toggle-password" data-target="regConfirmPassword">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="btn-submit" onclick="handleRegister()">
+                    <i class="fas fa-user-plus"></i> CREATE ACCOUNT
+                </button>
+            </div>
+
+            <div class="divider">
+                <span>OR CONTINUE WITH</span>
+            </div>
+
+            <div class="social-login">
+                <button class="social-btn" onclick="socialLogin('google')">
+                    <i class="fab fa-google"></i>
+                </button>
+                <button class="social-btn" onclick="socialLogin('facebook')">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="social-btn" onclick="socialLogin('github')">
+                    <i class="fab fa-github"></i>
+                </button>
+            </div>
+
+            <div id="messageBox" class="message"></div>
+
+            <div class="back-home">
+                <a href="index.html">
+                    <i class="fas fa-arrow-left"></i> BACK TO HOME
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
